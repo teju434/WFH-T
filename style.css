@@ -1,0 +1,824 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f6f6f6;
+color:#111;
+}
+
+.top-bar{
+background:#2450ff;
+color:white;
+text-align:center;
+padding:8px;
+font-size:13px;
+}
+
+header{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px;
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+}
+
+nav button{
+background:black;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:999px;
+cursor:pointer;
+}
+
+.hero{
+max-width:1200px;
+margin:auto;
+background:#fff;
+border-radius:30px;
+padding:80px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:800;
+line-height:1;
+}
+
+.hero p{
+max-width:600px;
+margin:20px auto;
+color:#666;
+}
+
+.primary-btn{
+background:#2450ff;
+color:white;
+border:none;
+padding:14px 30px;
+border-radius:999px;
+margin-top:20px;
+cursor:pointer;
+}
+
+.hero span{
+display:block;
+margin-top:10px;
+color:#777;
+}
+
+.hero img{
+width:240px;
+margin-top:50px;
+}
+
+.video-banner{
+max-width:1200px;
+margin:30px auto;
+position:relative;
+overflow:hidden;
+border-radius:25px;
+}
+
+.video-banner img{
+width:100%;
+display:block;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.overlay h2{
+font-size:54px;
+font-weight:700;
+}
+
+.play-btn{
+margin-top:20px;
+border:none;
+padding:12px 22px;
+border-radius:999px;
+}
+
+.focus{
+padding:120px 20px;
+text-align:center;
+}
+
+.focus h2{
+font-size:92px;
+font-weight:900;
+line-height:0.92;
+}
+
+.focus p{
+margin-top:20px;
+color:#666;
+}
+/* QUESTION SECTION */
+
+.question-section{
+max-width:1200px;
+margin:50px auto;
+padding:0 20px;
+}
+
+.question-card{
+position:relative;
+overflow:hidden;
+border-radius:28px;
+}
+
+.question-card img{
+width:100%;
+display:block;
+}
+
+.question-overlay{
+position:absolute;
+inset:0;
+padding:50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.15);
+}
+
+.question-left{
+color:white;
+max-width:420px;
+}
+
+.question-left h2{
+font-size:58px;
+font-weight:800;
+line-height:0.95;
+}
+
+.question-left p{
+margin-top:20px;
+line-height:1.6;
+}
+
+.subjects{
+display:flex;
+gap:12px;
+margin-top:25px;
+}
+
+.subjects span{
+background:white;
+color:black;
+padding:10px 16px;
+border-radius:50px;
+font-size:14px;
+}
+
+.chat-column{
+width:380px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.chat{
+padding:15px 18px;
+border-radius:16px;
+font-size:14px;
+line-height:1.5;
+}
+
+.light{
+background:#ece3da;
+color:#111;
+}
+
+.dark{
+background:#57514d;
+color:white;
+}
+
+.small{
+width:90px;
+text-align:center;
+margin-left:auto;
+}
+
+/* HELP SECTION */
+
+.help-section{
+max-width:1200px;
+margin:40px auto;
+padding:0 20px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.help-card-left{
+background:#f2f2f2;
+border-radius:25px;
+padding:30px;
+}
+
+.help-card-left h2{
+font-size:38px;
+}
+
+.help-tabs{
+display:flex;
+gap:10px;
+margin:20px 0;
+}
+
+.help-tabs span{
+padding:10px 16px;
+background:#e8e8e8;
+border-radius:50px;
+font-size:14px;
+}
+
+.active-tab{
+background:white !important;
+}
+
+.help-card-left h3{
+font-size:34px;
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.help-bottom{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.help-bottom img{
+width:140px;
+}
+
+.help-text{
+font-size:14px;
+line-height:1.6;
+}
+
+.help-card-right{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+}
+
+.help-card-right img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.help-overlay{
+position:absolute;
+inset:0;
+
+padding:40px;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.7),
+transparent
+);
+
+color:white;
+}
+
+.help-overlay h2{
+font-size:46px;
+line-height:0.95;
+}
+
+.help-overlay p{
+margin-top:15px;
+max-width:400px;
+}
+
+.help-overlay button{
+margin-top:20px;
+width:140px;
+
+padding:14px;
+
+border:none;
+border-radius:999px;
+
+background:white;
+color:black;
+
+font-weight:600;
+cursor:pointer;
+}
+/* TEACHING */
+
+.teaching-section{
+padding:120px 20px;
+text-align:center;
+}
+
+.teaching-section h2{
+font-size:90px;
+font-weight:900;
+line-height:.9;
+margin-bottom:30px;
+}
+
+.teaching-section p{
+max-width:650px;
+margin:auto;
+line-height:1.7;
+color:#666;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.grid-card{
+background:#f3f3f3;
+border-radius:25px;
+overflow:hidden;
+position:relative;
+}
+
+.text-card{
+padding:40px;
+}
+
+.text-card h3{
+font-size:54px;
+line-height:1;
+margin-bottom:30px;
+}
+
+.text-card ul{
+list-style:none;
+margin-bottom:30px;
+}
+
+.text-card li{
+padding:12px 0;
+border-bottom:1px solid #ddd;
+}
+
+.text-card button{
+padding:14px 24px;
+border:none;
+border-radius:999px;
+background:black;
+color:white;
+cursor:pointer;
+}
+
+.image-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.robot-card{
+padding:25px;
+text-align:center;
+}
+
+.robot-card img{
+height:260px;
+object-fit:contain;
+}
+
+.robot-card h3{
+font-size:42px;
+line-height:1;
+margin-top:20px;
+}
+
+.card-overlay{
+position:absolute;
+inset:0;
+display:flex;
+align-items:flex-end;
+padding:30px;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.7),
+transparent
+);
+
+color:white;
+}
+
+.card-overlay h3{
+font-size:42px;
+line-height:1;
+}
+
+/* FRANCE */
+
+.france-section{
+text-align:center;
+padding:120px 20px;
+}
+
+.france-section h2{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.france-section p{
+max-width:650px;
+margin:auto;
+color:#666;
+}
+
+/* PRIVACY */
+
+.privacy-section{
+max-width:1200px;
+margin:auto;
+padding:0 20px 100px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.privacy-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+}
+
+.privacy-content{
+background:#f3f3f3;
+padding:50px;
+border-radius:25px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.privacy-content h2{
+font-size:60px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.privacy-content p{
+line-height:1.7;
+color:#666;
+margin-bottom:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.teaching-section h2{
+font-size:50px;
+}
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.privacy-section{
+grid-template-columns:1fr;
+}
+
+.privacy-content h2{
+font-size:40px;
+}
+
+.text-card h3{
+font-size:40px;
+}
+}
+/* PRICING */
+
+.pricing-section{
+padding:100px 20px;
+}
+
+.pricing-card{
+max-width:1200px;
+margin:auto;
+
+background:#0f1115;
+color:white;
+
+border-radius:35px;
+padding:80px;
+
+text-align:center;
+}
+
+.launch-text{
+color:#9ea5b0;
+margin-bottom:20px;
+}
+
+.pricing-card h2{
+font-size:60px;
+line-height:1;
+margin-bottom:30px;
+}
+
+.price{
+font-size:120px;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.price-desc{
+color:#c7c7c7;
+margin-bottom:30px;
+}
+
+.pricing-card button{
+padding:15px 28px;
+border:none;
+border-radius:999px;
+font-weight:600;
+cursor:pointer;
+}
+
+
+
+/* BOX SECTION */
+
+.box-section{
+max-width:1200px;
+margin:auto;
+padding:0 20px 100px;
+
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:25px;
+}
+
+.box-left{
+background:#f3f3f3;
+border-radius:30px;
+padding:50px;
+}
+
+.box-left h2{
+font-size:60px;
+line-height:1;
+margin-bottom:40px;
+}
+
+.spec-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.spec-item{
+padding:20px;
+background:white;
+border-radius:18px;
+}
+
+.spec-item h4{
+margin-bottom:8px;
+}
+
+.box-right{
+background:#f3f3f3;
+border-radius:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px;
+}
+
+.box-right img{
+width:280px;
+}
+
+
+
+/* FAQ */
+
+.faq-section{
+max-width:900px;
+margin:120px auto;
+padding:0 20px;
+}
+
+.faq-section h2{
+font-size:56px;
+margin-bottom:40px;
+}
+
+.faq-section details{
+padding:20px 0;
+border-bottom:1px solid #ddd;
+}
+
+.faq-section summary{
+font-size:20px;
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-section p{
+margin-top:15px;
+line-height:1.7;
+color:#666;
+}
+
+
+
+/* FOOTER */
+
+.footer{
+background:#f3f3f3;
+padding:70px 20px 30px;
+}
+
+.footer-top{
+max-width:1200px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+gap:50px;
+}
+
+.footer-brand h2{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.footer-brand p{
+max-width:280px;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.footer-brand button{
+padding:14px 26px;
+border:none;
+border-radius:999px;
+background:black;
+color:white;
+}
+
+.footer-links{
+display:flex;
+gap:80px;
+}
+
+.footer-links h4{
+margin-bottom:15px;
+}
+
+.footer-links a{
+display:block;
+text-decoration:none;
+color:#666;
+margin-bottom:10px;
+}
+
+.footer-bottom{
+max-width:1200px;
+margin:50px auto 0;
+padding-top:20px;
+border-top:1px solid #ddd;
+}
+
+.footer-bottom p{
+color:#777;
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.pricing-card{
+padding:50px 30px;
+}
+
+.pricing-card h2{
+font-size:38px;
+}
+
+.price{
+font-size:80px;
+}
+
+.box-section{
+grid-template-columns:1fr;
+}
+
+.spec-grid{
+grid-template-columns:1fr;
+}
+
+.footer-top{
+flex-direction:column;
+}
+
+.footer-links{
+flex-direction:column;
+gap:30px;
+}
+
+.faq-section h2{
+font-size:40px;
+}
+
+.box-left h2{
+font-size:40px;
+}
+}
+.faq-section details{
+    padding:22px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.faq-section summary{
+    cursor:pointer;
+    font-size:20px;
+    font-weight:600;
+    list-style:none;
+    position:relative;
+    padding-right:30px;
+}
+
+.faq-section summary::after{
+    content:"+";
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:24px;
+    transition:.3s;
+}
+
+.faq-section details[open] summary::after{
+    transform:rotate(45deg);
+}
+
+.faq-section p{
+    margin-top:15px;
+    color:#666;
+    line-height:1.8;
+}
