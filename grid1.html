@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Tasks 1-5</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+
+h2{
+    margin-top:50px;
+}
+
+/* Common Box */
+.box{
+    background:skyblue;
+    padding:30px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+/* =========================
+   Task 1
+========================= */
+
+.task1{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* =========================
+   Task 2
+========================= */
+
+.task2{
+    width:500px;
+    height:300px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap:10px;
+}
+
+.task2 .box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =========================
+   Task 3
+========================= */
+
+.task3{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+/* =========================
+   Task 4
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* =========================
+   Task 5
+========================= */
+
+.students{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+</style>
+</head>
+<body>
+
+<!-- =========================
+Task 1
+========================= -->
+
+<h2>Task 1: Grid with 6 Boxes</h2>
+
+<div class="task1">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<!-- =========================
+Task 2
+========================= -->
+
+<h2>Task 2: 2 × 2 Grid</h2>
+
+<div class="task2">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+</div>
+
+<!-- =========================
+Task 3
+========================= -->
+
+<h2>Task 3: 4 Column Grid</h2>
+
+<div class="task3">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+<!-- =========================
+Task 4
+========================= -->
+
+<h2>Task 4: Image Gallery</h2>
+
+<div class="gallery">
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+    <img src="https://picsum.photos/300?6">
+    <img src="https://picsum.photos/300?7">
+    <img src="https://picsum.photos/300?8">
+    <img src="https://picsum.photos/300?9">
+</div>
+
+<!-- =========================
+Task 5
+========================= -->
+
+<h2>Task 5: Student Cards</h2>
+
+<div class="students">
+
+    <div class="card">
+        <img src="https://picsum.photos/200?10">
+        <h3>Rahul</h3>
+        <p>CSE</p>
+        <p>101</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?11">
+        <h3>Priya</h3>
+        <p>ECE</p>
+        <p>102</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?12">
+        <h3>Arjun</h3>
+        <p>EEE</p>
+        <p>103</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?13">
+        <h3>Meena</h3>
+        <p>CIVIL</p>
+        <p>104</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?14">
+        <h3>Kiran</h3>
+        <p>MECH</p>
+        <p>105</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?15">
+        <h3>Vijay</h3>
+        <p>IT</p>
+        <p>106</p>
+    </div>
+
+</div>
+
+</body>
+</html>

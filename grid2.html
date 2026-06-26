@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Tasks 6-10</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+
+h2{
+    margin-top:50px;
+}
+
+/* Common Box */
+.box{
+    background: skyblue;
+    border:1px solid #333;
+    padding:30px;
+    text-align:center;
+    font-size:20px;
+}
+
+/* =========================
+   Task 6
+========================= */
+
+.task6{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(3,100px);
+    gap:10px;
+}
+
+/* =========================
+   Task 7
+========================= */
+
+.task7{
+    display:grid;
+    grid-template-columns:150px 2fr 1fr;
+    gap:10px;
+}
+
+.task7 div{
+    background:lightgreen;
+    padding:20px;
+    border:1px solid #333;
+}
+
+/* =========================
+   Task 8
+========================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.plan{
+    border:1px solid #ccc;
+    text-align:center;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+
+    display:grid;
+    grid-template-rows:60px 80px 50px 50px 50px 80px;
+}
+
+.plan h3{
+    margin:0;
+}
+
+.price{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.btn{
+    background:royalblue;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* =========================
+   Task 9
+========================= */
+
+.task9{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    row-gap:20px;
+    column-gap:30px;
+}
+
+/* =========================
+   Task 10
+========================= */
+
+.task10{
+    width:600px;
+    height:400px;
+
+    display:grid;
+    grid-template-columns:repeat(3,100px);
+    grid-template-rows:repeat(2,100px);
+
+    justify-content:center;
+    align-content:center;
+
+    border:2px solid black;
+    margin:auto;
+    gap:15px;
+}
+
+.task10 .box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+</style>
+</head>
+<body>
+
+<!-- =========================
+Task 6
+========================= -->
+
+<h2>Task 6: 4 Columns × 3 Rows Grid</h2>
+
+<div class="task6">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+</div>
+
+<!-- =========================
+Task 7
+========================= -->
+
+<h2>Task 7: Different Column Sizes</h2>
+
+<div class="task7">
+    <div>150px Column</div>
+    <div>2fr Column - Takes More Space</div>
+    <div>1fr Column</div>
+</div>
+
+<!-- =========================
+Task 8
+========================= -->
+
+<h2>Task 8: Pricing Table</h2>
+
+<div class="pricing">
+
+    <div class="plan">
+        <h3>Basic</h3>
+        <div class="price">₹499</div>
+        <div>1 Website</div>
+        <div>5 GB Storage</div>
+        <div>Email Support</div>
+        <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="plan">
+        <h3>Standard</h3>
+        <div class="price">₹999</div>
+        <div>5 Websites</div>
+        <div>20 GB Storage</div>
+        <div>Priority Support</div>
+        <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="plan">
+        <h3>Premium</h3>
+        <div class="price">₹1499</div>
+        <div>Unlimited Sites</div>
+        <div>100 GB Storage</div>
+        <div>24/7 Support</div>
+        <button class="btn">Buy Now</button>
+    </div>
+
+</div>
+
+<!-- =========================
+Task 9
+========================= -->
+
+<h2>Task 9: Grid Gap Example</h2>
+
+<div class="task9">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+</div>
+
+<!-- =========================
+Task 10
+========================= -->
+
+<h2>Task 10: Center Grid Items</h2>
+
+<div class="task10">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+    <div class="box">F</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Tasks 16-20</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    margin:20px;
+}
+
+h2{
+    margin:40px 0 20px;
+}
+
+/* Common Box */
+
+.box{
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    border:1px solid #333;
+}
+
+/* =================================
+   Task 16 - Grid Template Areas
+================================= */
+
+.layout16{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar main"
+    "footer footer";
+    gap:10px;
+}
+
+.header16{
+    grid-area:header;
+    background:orange;
+}
+
+.sidebar16{
+    grid-area:sidebar;
+    background:lightgreen;
+}
+
+.main16{
+    grid-area:main;
+    background:skyblue;
+}
+
+.footer16{
+    grid-area:footer;
+    background:tomato;
+}
+
+/* =================================
+   Task 17 - Admin Dashboard
+================================= */
+
+.dashboard17{
+    display:grid;
+
+    grid-template-columns:200px 1fr 200px;
+
+    grid-template-areas:
+    "header header header"
+    "menu content ads"
+    "menu content ads"
+    "footer footer footer";
+
+    gap:10px;
+}
+
+.header17{
+    grid-area:header;
+    background:#f39c12;
+}
+
+.menu17{
+    grid-area:menu;
+    background:#2ecc71;
+}
+
+.content17{
+    grid-area:content;
+    background:#3498db;
+}
+
+.ads17{
+    grid-area:ads;
+    background:#9b59b6;
+    color:white;
+}
+
+.footer17{
+    grid-area:footer;
+    background:#e74c3c;
+    color:white;
+}
+
+/* =================================
+   Task 18 - Blog Layout
+================================= */
+
+.blog18{
+    display:grid;
+
+    grid-template-columns:3fr 1fr;
+
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main sidebar"
+    "footer footer";
+
+    gap:10px;
+}
+
+.blog-header{
+    grid-area:header;
+    background:#f1c40f;
+}
+
+.blog-nav{
+    grid-area:nav;
+    background:#95a5a6;
+}
+
+.blog-main{
+    grid-area:main;
+    background:#85c1e9;
+    min-height:250px;
+}
+
+.blog-sidebar{
+    grid-area:sidebar;
+    background:#58d68d;
+}
+
+.blog-footer{
+    grid-area:footer;
+    background:#ec7063;
+}
+
+/* =================================
+   Task 19 - Responsive Gallery
+================================= */
+
+.gallery19{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product19{
+    background:#87ceeb;
+    padding:40px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+.gallery19{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+.gallery19{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* =================================
+   Task 20 - E-Commerce Homepage
+================================= */
+
+.ecommerce{
+    display:grid;
+
+    grid-template-columns:250px 1fr;
+
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "hero hero"
+    "sidebar categories"
+    "sidebar featured"
+    "reviews reviews"
+    "footer footer";
+
+    gap:15px;
+}
+
+.ec-header{
+    grid-area:header;
+    background:#34495e;
+    color:white;
+}
+
+.ec-nav{
+    grid-area:nav;
+    background:#2c3e50;
+    color:white;
+}
+
+.ec-hero{
+    grid-area:hero;
+    background:#f39c12;
+    min-height:200px;
+}
+
+.ec-sidebar{
+    grid-area:sidebar;
+    background:#d5dbdb;
+}
+
+.ec-categories{
+    grid-area:categories;
+    background:#aed6f1;
+}
+
+.ec-featured{
+    grid-area:featured;
+}
+
+.featured-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.product-card{
+    background:white;
+    border:1px solid #ccc;
+    padding:20px;
+    text-align:center;
+}
+
+.ec-reviews{
+    grid-area:reviews;
+    background:#abebc6;
+}
+
+.ec-footer{
+    grid-area:footer;
+    background:#34495e;
+    color:white;
+}
+
+/* Responsive Homepage */
+
+@media(max-width:768px){
+
+.ecommerce{
+
+grid-template-columns:1fr;
+
+grid-template-areas:
+"header"
+"nav"
+"hero"
+"categories"
+"featured"
+"sidebar"
+"reviews"
+"footer";
+
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- =============================
+Task 16
+============================= -->
+
+<h2>Task 16 - Grid Template Areas Layout</h2>
+
+<div class="layout16">
+
+<div class="box header16">Header</div>
+
+<div class="box sidebar16">Sidebar</div>
+
+<div class="box main16">Main Content</div>
+
+<div class="box footer16">Footer</div>
+
+</div>
+
+<!-- =============================
+Task 17
+============================= -->
+
+<h2>Task 17 - Admin Dashboard</h2>
+
+<div class="dashboard17">
+
+<div class="box header17">Header</div>
+
+<div class="box menu17">Menu</div>
+
+<div class="box content17">Content</div>
+
+<div class="box ads17">Ads</div>
+
+<div class="box footer17">Footer</div>
+
+</div>
+
+<!-- =============================
+Task 18
+============================= -->
+
+<h2>Task 18 - Blog Page Layout</h2>
+
+<div class="blog18">
+
+<div class="box blog-header">Header</div>
+
+<div class="box blog-nav">Navigation</div>
+
+<div class="box blog-main">Main Content Area</div>
+
+<div class="box blog-sidebar">Sidebar</div>
+
+<div class="box blog-footer">Footer</div>
+
+</div>
+
+<!-- =============================
+Task 19
+============================= -->
+
+<h2>Task 19 - Responsive Product Gallery</h2>
+
+<div class="gallery19">
+
+<div class="product19">Product 1</div>
+<div class="product19">Product 2</div>
+<div class="product19">Product 3</div>
+<div class="product19">Product 4</div>
+<div class="product19">Product 5</div>
+<div class="product19">Product 6</div>
+<div class="product19">Product 7</div>
+<div class="product19">Product 8</div>
+
+</div>
+
+<!-- =============================
+Task 20
+============================= -->
+
+<h2>Task 20 - E-Commerce Homepage</h2>
+
+<div class="ecommerce">
+
+<div class="box ec-header">
+    E-Commerce Header
+</div>
+
+<div class="box ec-nav">
+    Navigation Bar
+</div>
+
+<div class="box ec-hero">
+    Hero Banner
+</div>
+
+<div class="box ec-sidebar">
+    Sidebar Filters
+</div>
+
+<div class="box ec-categories">
+    Categories Section
+</div>
+
+<div class="ec-featured">
+
+    <div class="featured-grid">
+
+        <div class="product-card">
+            Product 1
+        </div>
+
+        <div class="product-card">
+            Product 2
+        </div>
+
+        <div class="product-card">
+            Product 3
+        </div>
+
+        <div class="product-card">
+            Product 4
+        </div>
+
+        <div class="product-card">
+            Product 5
+        </div>
+
+        <div class="product-card">
+            Product 6
+        </div>
+
+    </div>
+
+</div>
+
+<div class="box ec-reviews">
+    Customer Reviews Section
+</div>
+
+<div class="box ec-footer">
+    Footer
+</div>
+
+</div>
+
+</body>
+</html>
