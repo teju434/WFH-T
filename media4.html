@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Tasks 16-20</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:20px;
+}
+
+section{
+    border:1px solid #ccc;
+    padding:20px;
+    margin-bottom:40px;
+}
+
+h2{
+    color:#333;
+}
+
+/* =====================
+   Task 16 - Login Form
+===================== */
+
+.login-form{
+    width:400px;
+    margin:auto;
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+.login-form input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    box-sizing:border-box;
+}
+
+/* =====================
+   Task 17 - Footer
+===================== */
+
+.footer{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.footer-box{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+/* =====================
+   Task 18 - Profile Card
+===================== */
+
+.profile-card{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+.profile-card img{
+    width:150px;
+}
+
+/* =====================
+   Task 19 - Table
+===================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:left;
+}
+
+/* =====================
+   Task 20 - College Website
+===================== */
+
+.header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#0055aa;
+    padding:15px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    background:#e6f2ff;
+    padding:50px;
+    text-align:center;
+}
+
+.about,
+.contact{
+    padding:20px;
+}
+
+.courses,
+.faculty,
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.course,
+.faculty-member,
+.testimonial{
+    border:1px solid #ccc;
+    padding:20px;
+    text-align:center;
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.contact input,
+.contact textarea{
+    padding:10px;
+}
+
+.college-footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* =====================
+   Tablet
+===================== */
+
+@media(max-width:992px){
+
+    /* Task 16 */
+    .login-form{
+        width:300px;
+    }
+
+    /* Task 17 */
+    .footer{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Task 20 */
+    .courses,
+    .faculty,
+    .testimonials{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* =====================
+   Mobile
+===================== */
+
+@media(max-width:768px){
+
+    /* Task 16 */
+    .login-form{
+        width:95%;
+    }
+
+    /* Task 17 */
+    .footer{
+        grid-template-columns:1fr;
+    }
+
+    /* Task 18 */
+    .profile-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    /* Task 19 */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr{
+        display:block;
+    }
+
+    thead{
+        display:none;
+    }
+
+    tr{
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        padding:10px;
+    }
+
+    td{
+        border:none;
+    }
+
+    /* Task 20 */
+    .nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .courses,
+    .faculty,
+    .testimonials{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:30px 15px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- =====================
+     Task 16
+===================== -->
+
+<section>
+<h2>Task 16 - Responsive Login Form</h2>
+
+<div class="login-form">
+    <h3>Login</h3>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <input type="submit" value="Login">
+</div>
+
+</section>
+
+<!-- =====================
+     Task 17
+===================== -->
+
+<section>
+<h2>Task 17 - Responsive Footer</h2>
+
+<div class="footer">
+    <div class="footer-box">Column 1</div>
+    <div class="footer-box">Column 2</div>
+    <div class="footer-box">Column 3</div>
+    <div class="footer-box">Column 4</div>
+</div>
+
+</section>
+
+<!-- =====================
+     Task 18
+===================== -->
+
+<section>
+<h2>Task 18 - Responsive Profile Card</h2>
+
+<div class="profile-card">
+    <img src="https://picsum.photos/150" alt="Profile">
+    <div>
+        <h3>John Doe</h3>
+        <p>Frontend Developer</p>
+        <p>Passionate about web development.</p>
+    </div>
+</div>
+
+</section>
+
+<!-- =====================
+     Task 19
+===================== -->
+
+<section>
+<h2>Task 19 - Responsive Table</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Rahul</td>
+            <td>CSE</td>
+            <td>A</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>ECE</td>
+            <td>B+</td>
+        </tr>
+
+        <tr>
+            <td>Kiran</td>
+            <td>EEE</td>
+            <td>A+</td>
+        </tr>
+    </tbody>
+</table>
+
+</section>
+
+<!-- =====================
+     Task 20
+===================== -->
+
+<section>
+<h2>Task 20 - Responsive College Website Homepage</h2>
+
+<header class="header">
+    <h1>ABC College</h1>
+</header>
+
+<nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="#">Faculty</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+    <h2>Welcome to ABC College</h2>
+    <p>Empowering Students for a Better Future</p>
+</div>
+
+<div class="about">
+    <h3>About Us</h3>
+    <p>
+        ABC College provides quality education and
+        career opportunities for students.
+    </p>
+</div>
+
+<h3>Courses</h3>
+<div class="courses">
+    <div class="course">Computer Science</div>
+    <div class="course">Electronics</div>
+    <div class="course">Mechanical</div>
+</div>
+
+<h3>Faculty</h3>
+<div class="faculty">
+    <div class="faculty-member">Dr. Sharma</div>
+    <div class="faculty-member">Prof. Rao</div>
+    <div class="faculty-member">Dr. Kumar</div>
+</div>
+
+<h3>Testimonials</h3>
+<div class="testimonials">
+    <div class="testimonial">Excellent Campus</div>
+    <div class="testimonial">Great Faculty</div>
+    <div class="testimonial">Wonderful Experience</div>
+</div>
+
+<div class="contact">
+    <h3>Contact Us</h3>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<footer class="college-footer">
+    © 2026 ABC College. All Rights Reserved.
+</footer>
+
+</section>
+
+</body>
+</html>

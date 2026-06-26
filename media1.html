@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Queries Tasks 1-5</title>
+
+<style>
+
+body{
+    margin:20px;
+    font-family:Arial, sans-serif;
+}
+
+/* Common Styling */
+section{
+    border:1px solid #ccc;
+    padding:20px;
+    margin-bottom:40px;
+}
+
+h2{
+    color:#333;
+}
+
+/* =========================
+   Task 1
+========================= */
+
+.responsive-heading{
+    text-align:center;
+    font-size:48px;
+}
+
+/* =========================
+   Task 2
+========================= */
+
+.bg-section{
+    padding:40px;
+    background:lightblue;
+    text-align:center;
+}
+
+/* =========================
+   Task 3
+========================= */
+
+.responsive-para{
+    width:70%;
+    background:#f4f4f4;
+    padding:15px;
+}
+
+/* =========================
+   Task 4
+========================= */
+
+.box-container{
+    display:flex;
+    gap:20px;
+}
+
+.box{
+    flex:1;
+    padding:40px;
+    background:skyblue;
+    text-align:center;
+}
+
+/* =========================
+   Task 5
+========================= */
+
+.responsive-image{
+    width:300px;
+    display:block;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media(max-width:992px){
+
+    /* Task 1 */
+    .responsive-heading{
+        font-size:36px;
+    }
+
+    /* Task 2 */
+    .bg-section{
+        background:lightgreen;
+    }
+
+    /* Task 3 */
+    .responsive-para{
+        width:90%;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:768px){
+
+    /* Task 1 */
+    .responsive-heading{
+        font-size:24px;
+    }
+
+    /* Task 2 */
+    .bg-section{
+        background:lightgray;
+    }
+
+    /* Task 3 */
+    .responsive-para{
+        width:100%;
+    }
+
+    /* Task 4 */
+    .box-container{
+        flex-direction:column;
+    }
+
+    /* Task 5 */
+    .responsive-image{
+        display:none;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Task 1 -->
+<section>
+    <h2>Task 1 - Responsive Heading</h2>
+    <h1 class="responsive-heading">Responsive Heading</h1>
+</section>
+
+<!-- Task 2 -->
+<section>
+    <h2>Task 2 - Background Color Change</h2>
+    <div class="bg-section">
+        Resize screen to see color change
+    </div>
+</section>
+
+<!-- Task 3 -->
+<section>
+    <h2>Task 3 - Responsive Paragraph Width</h2>
+    <p class="responsive-para">
+        This paragraph changes width according to screen size.
+    </p>
+</section>
+
+<!-- Task 4 -->
+<section>
+    <h2>Task 4 - Responsive Boxes</h2>
+
+    <div class="box-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</section>
+
+<!-- Task 5 -->
+<section>
+    <h2>Task 5 - Hide Image on Mobile</h2>
+
+    <img
+    class="responsive-image"
+    src="https://picsum.photos/300/200"
+    alt="Sample Image">
+</section>
+
+</body>
+</html>

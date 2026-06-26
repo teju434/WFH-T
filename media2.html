@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Tasks 6-10</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+
+section{
+    border:1px solid #ccc;
+    padding:20px;
+    margin-bottom:40px;
+}
+
+h2{
+    color:#333;
+}
+
+/* =====================
+   Task 6
+===================== */
+
+.nav1{
+    background:#333;
+}
+
+.nav1 ul{
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nav1 li{
+    padding:15px;
+}
+
+.nav1 a{
+    color:white;
+    text-decoration:none;
+}
+
+/* =====================
+   Task 7
+===================== */
+
+.menu-btn{
+    display:none;
+    padding:10px 20px;
+}
+
+.nav2{
+    display:flex;
+    gap:20px;
+}
+
+/* =====================
+   Task 8
+===================== */
+
+.logo{
+    width:250px;
+}
+
+/* =====================
+   Task 9
+===================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f2f2f2;
+    padding:20px;
+}
+
+.header-nav{
+    display:flex;
+    gap:20px;
+}
+
+/* =====================
+   Task 10
+===================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:skyblue;
+    padding:40px;
+    text-align:center;
+}
+
+/* =====================
+   Tablet
+===================== */
+
+@media(max-width:992px){
+
+    /* Task 8 */
+    .logo{
+        width:180px;
+    }
+
+    /* Task 10 */
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* =====================
+   Mobile
+===================== */
+
+@media(max-width:768px){
+
+    /* Task 6 */
+    .nav1 ul{
+        flex-direction:column;
+    }
+
+    /* Task 7 */
+    .nav2{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    /* Task 8 */
+    .logo{
+        width:120px;
+    }
+
+    /* Task 9 */
+    .header{
+        flex-direction:column;
+    }
+
+    .header-nav{
+        margin-top:15px;
+    }
+
+    /* Task 10 */
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- =====================
+     Task 6
+===================== -->
+
+<section>
+<h2>Task 6 - Responsive Navigation</h2>
+
+<nav class="nav1">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+</section>
+
+<!-- =====================
+     Task 7
+===================== -->
+
+<section>
+<h2>Task 7 - Menu Button on Mobile</h2>
+
+<button class="menu-btn">☰ Menu</button>
+
+<div class="nav2">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+</section>
+
+<!-- =====================
+     Task 8
+===================== -->
+
+<section>
+<h2>Task 8 - Responsive Logo</h2>
+
+<img
+class="logo"
+src="https://picsum.photos/300/100"
+alt="Logo">
+
+</section>
+
+<!-- =====================
+     Task 9
+===================== -->
+
+<section>
+<h2>Task 9 - Responsive Header</h2>
+
+<div class="header">
+
+    <h3>College Logo</h3>
+
+    <div class="header-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </div>
+
+</div>
+
+</section>
+
+<!-- =====================
+     Task 10
+===================== -->
+
+<section>
+<h2>Task 10 - Responsive Cards</h2>
+
+<div class="cards">
+
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
