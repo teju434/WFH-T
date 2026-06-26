@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Tasks </title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    margin-top: 50px;
+    color: #333;
+}
+
+.box {
+    background: skyblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Task 1 */
+.task1 {
+    display: flex;
+    gap: 20px;
+}
+
+.task1 .box {
+    flex: 1;
+}
+
+/* Task 2 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Task 3 */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Task 4 */
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery div {
+    width: 120px;
+    height: 120px;
+}
+
+/* Task 5 */
+.pricing {
+    display: flex;
+    gap: 20px;
+}
+
+.plan {
+    flex: 1;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Task 6 */
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Task 7 */
+.layout {
+    display: flex;
+}
+
+.left {
+    width: 200px;
+    background: #ddd;
+    padding: 20px;
+}
+
+.right {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+/* Task 8 */
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.profile img {
+    width: 150px;
+}
+
+/* Task 9 */
+.center {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Task 10 */
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Task 11 */
+.demo {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+.center-demo {
+    justify-content: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+/* Task 12 */
+.center-box {
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Task 13 */
+.align-demo {
+    display: flex;
+    height: 250px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.align-demo div {
+    width: 100px;
+    background: lightcoral;
+    margin: 5px;
+    text-align: center;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.flex-start-align {
+    align-items: flex-start;
+}
+
+.flex-end-align {
+    align-items: flex-end;
+}
+
+.baseline-align {
+    align-items: baseline;
+}
+
+.h100 { height: 100px; }
+.h150 { height: 150px; }
+.h80 { height: 80px; }
+.h200 { height: 200px; }
+
+/* Task 14 */
+.login-page {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+/* Task 15 */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.wrap div {
+    width: 150px;
+    height: 100px;
+    background: lightgreen;
+}
+
+/* Task 16 */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product {
+    width: 180px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Task 17 */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photos img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Task 18 */
+.grow {
+    display: flex;
+}
+
+.one {
+    flex: 1;
+    background: red;
+    color: white;
+    padding: 20px;
+}
+
+.two {
+    flex: 2;
+    background: blue;
+    color: white;
+    padding: 20px;
+}
+
+.three {
+    flex: 3;
+    background: green;
+    color: white;
+    padding: 20px;
+}
+
+/* Task 19 */
+.basis {
+    display: flex;
+}
+
+.basis div {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.b1 {
+    flex-basis: 100px;
+}
+
+.b2 {
+    flex-basis: 200px;
+}
+
+.b3 {
+    flex-basis: 300px;
+}
+
+.b4 {
+    flex-basis: auto;
+}
+
+/* Task 20 */
+header,
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 500px;
+}
+
+.sidebar {
+    width: 250px;
+    background: #444;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-cards div {
+    flex: 1;
+    min-width: 180px;
+    background: #eee;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+<h2>Task 1</h2>
+<div class="task1">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+</div>
+
+<h2>Task 2</h2>
+<div class="navbar">
+    <div>Logo</div>
+    <div class="menu">
+        <div>Home</div>
+        <div>About</div>
+        <div>Services</div>
+        <div>Contact</div>
+    </div>
+</div>
+
+<h2>Task 3</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://picsum.photos/300/200?1" alt="Card 1">
+        <h3>Card 1</h3>
+        <p>Description</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?2" alt="Card 2">
+        <h3>Card 2</h3>
+        <p>Description</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?3" alt="Card 3">
+        <h3>Card 3</h3>
+        <p>Description</p>
+        <button>Read More</button>
+    </div>
+</div>
+
+<h2>Task 4</h2>
+<div class="gallery">
+    <div style="background:red"></div>
+    <div style="background:blue"></div>
+    <div style="background:green"></div>
+    <div style="background:orange"></div>
+    <div style="background:purple"></div>
+    <div style="background:pink"></div>
+</div>
+
+<h2>Task 5</h2>
+<div class="pricing">
+    <div class="plan">Basic</div>
+    <div class="plan">Standard</div>
+    <div class="plan">Premium</div>
+</div>
+
+<h2>Task 6</h2>
+<div class="vertical">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+</div>
+
+<h2>Task 7</h2>
+<div class="layout">
+    <div class="left">Menu</div>
+    <div class="right">Main Content</div>
+</div>
+
+<h2>Task 8</h2>
+<div class="profile">
+    <img src="https://picsum.photos/150" alt="Profile image">
+    <h3>John Doe</h3>
+    <p>Developer</p>
+    <p>Frontend Developer</p>
+</div>
+
+<h2>Task 9</h2>
+<div class="center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+</div>
+
+<h2>Task 10</h2>
+<div class="space-between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+</div>
+
+<h2>Task 11 - Justify Content Values</h2>
+<h4>flex-start</h4>
+<div class="demo start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h4>flex-end</h4>
+<div class="demo end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h4>center</h4>
+<div class="demo center-demo">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h4>space-between</h4>
+<div class="demo between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h4>space-around</h4>
+<div class="demo around">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h4>space-evenly</h4>
+<div class="demo evenly">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<h2>Task 12</h2>
+<div class="center-box">
+    <div class="box">Centered Box</div>
+</div>
+
+<h2>Task 13 - Align Items</h2>
+<h4>Stretch</h4>
+<div class="align-demo stretch">
+    <div class="h100">100px</div>
+    <div class="h150">150px</div>
+    <div class="h80">80px</div>
+    <div class="h200">200px</div>
+</div>
+
+<h4>Center</h4>
+<div class="align-demo center-align">
+    <div class="h100">100px</div>
+    <div class="h150">150px</div>
+    <div class="h80">80px</div>
+    <div class="h200">200px</div>
+</div>
+
+<h4>Flex Start</h4>
+<div class="align-demo flex-start-align">
+    <div class="h100">100px</div>
+    <div class="h150">150px</div>
+    <div class="h80">80px</div>
+    <div class="h200">200px</div>
+</div>
+
+<h4>Flex End</h4>
+<div class="align-demo flex-end-align">
+    <div class="h100">100px</div>
+    <div class="h150">150px</div>
+    <div class="h80">80px</div>
+    <div class="h200">200px</div>
+</div>
+
+<h4>Baseline</h4>
+<div class="align-demo baseline-align">
+    <div class="h100">100px</div>
+    <div class="h150">150px</div>
+    <div class="h80">80px</div>
+    <div class="h200">200px</div>
+</div>
+
+<h2>Task 14 - Login Page</h2>
+<div class="login-page">
+    <div class="login-card">
+        <h3>Login</h3>
+        <input type="text" placeholder="Username" style="width:100%;padding:8px;"><br><br>
+        <input type="password" placeholder="Password" style="width:100%;padding:8px;"><br><br>
+        <button style="width:100%;padding:10px;">Login</button>
+    </div>
+</div>
+
+<h2>Task 15 - Flex Wrap</h2>
+<div class="wrap">
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div>
+</div>
+
+<h2>Task 16 - Product Gallery</h2>
+<div class="products">
+    <div class="product">Product 1</div>
+    <div class="product">Product 2</div>
+    <div class="product">Product 3</div>
+    <div class="product">Product 4</div>
+    <div class="product">Product 5</div>
+    <div class="product">Product 6</div>
+    <div class="product">Product 7</div>
+    <div class="product">Product 8</div>
+    <div class="product">Product 9</div>
+    <div class="product">Product 10</div>
+</div>
+
+<h2>Task 17 - Photo Gallery</h2>
+<div class="photos">
+    <img src="https://picsum.photos/150?1" alt="Photo 1">
+    <img src="https://picsum.photos/150?2" alt="Photo 2">
+    <img src="https://picsum.photos/150?3" alt="Photo 3">
+    <img src="https://picsum.photos/150?4" alt="Photo 4">
+    <img src="https://picsum.photos/150?5" alt="Photo 5">
+    <img src="https://picsum.photos/150?6" alt="Photo 6">
+    <img src="https://picsum.photos/150?7" alt="Photo 7">
+    <img src="https://picsum.photos/150?8" alt="Photo 8">
+    <img src="https://picsum.photos/150?9" alt="Photo 9">
+    <img src="https://picsum.photos/150?10" alt="Photo 10">
+    <img src="https://picsum.photos/150?11" alt="Photo 11">
+    <img src="https://picsum.photos/150?12" alt="Photo 12">
+    <img src="https://picsum.photos/150?13" alt="Photo 13">
+    <img src="https://picsum.photos/150?14" alt="Photo 14">
+    <img src="https://picsum.photos/150?15" alt="Photo 15">
+</div>
+
+<h2>Task 18 - Flex Grow</h2>
+<div class="grow">
+    <div class="one">Flex 1</div>
+    <div class="two">Flex 2</div>
+    <div class="three">Flex 3</div>
+</div>
+
+<h2>Task 19 - Flex Basis</h2>
+<div class="basis">
+    <div class="b1">100px</div>
+    <div class="b2">200px</div>
+    <div class="b3">300px</div>
+    <div class="b4">Auto</div>
+</div>
+
+<h2>Task 20 - Dashboard Layout</h2>
+<header>
+    <h2>Dashboard Header</h2>
+</header>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <h3>Sidebar</h3>
+        <p>Home</p>
+        <p>Users</p>
+        <p>Reports</p>
+        <p>Settings</p>
+    </div>
+
+    <div class="content">
+        <h3>Dashboard Cards</h3>
+        <div class="dashboard-cards">
+            <div>Card 1</div>
+            <div>Card 2</div>
+            <div>Card 3</div>
+            <div>Card 4</div>
+        </div>
+
+        <h3>Table Section</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Developer</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sarah</td>
+                <td>Designer</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>David</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Emma</td>
+                <td>Tester</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <h3>Dashboard Footer</h3>
+</footer>
+</body>
+</html>
