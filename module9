@@ -1,0 +1,15 @@
+<style>
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {
+    color: purple;
+}
+</style>
+
+<a href="#">Click Me</a>

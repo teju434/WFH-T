@@ -1,0 +1,12 @@
+<style>
+img {
+    width: 200px;
+    transition: transform 0.5s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+</style>
+
+<img src="https://via.placeholder.com/200">

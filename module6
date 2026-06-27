@@ -1,0 +1,16 @@
+<style>
+.loader {
+    border: 5px solid lightgray;
+    border-top: 5px solid blue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+<div class="loader"></div>

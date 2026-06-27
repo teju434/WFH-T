@@ -1,0 +1,30 @@
+<style>
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+    }
+}
+</style>
+
+<div class="nav">
+    <div>Logo</div>
+    <div class="menu">
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+        <div>Login</div>
+    </div>
+</div>
